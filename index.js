@@ -50,7 +50,7 @@ async function run() {
       const result = await orderCollection.insertOne(order);
       res.json(result);
     });
-    // GET ALL ORDERS FROM Orders API
+    // GET ALL ORDERS FROM Orders API Database
     app.get("/orders/manageAllOrders", async (req, res) => {
       const query = {};
       const cursor = orderCollection.find(query);
